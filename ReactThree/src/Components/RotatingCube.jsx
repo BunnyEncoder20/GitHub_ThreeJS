@@ -6,15 +6,15 @@ const RotatingCube = () => {
 
     useFrame(() => {
         if (meshRef.current) {
-            meshRef.current.rotation.y += 0.1
-            meshRef.current.rotation.x += 0.1 
+            meshRef.current.rotation.x += 0.01 
+            meshRef.current.rotation.y += 0.01
         }
     })
 
     return (
         <mesh ref={meshRef}>
-            <cylinderGeometry args={[1,1,1]} />
-            <meshLambertMaterial color="#468585" emissive="#468585" />
+            <torusGeometry args={[5,1,8,50]} />
+            <meshPhysicalMaterial color="#468585" emissive="#468585" roughness={1} metalness={1} reflection={1} />
         </mesh>
     )
 }

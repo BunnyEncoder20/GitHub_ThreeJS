@@ -11,7 +11,7 @@ const App = () => {
 		{/* orbit controls */}
     	<OrbitControls enableZoom enablePan enableRotate />
 		{/* Lighting */}
-		<directionalLight position={[1,1,1]} intensity={10} color="0x9CDBA6" />
+		<directionalLight position={[1,1,1]} intensity={10} color="papayawhip" />
 		{/* Background color */}
 		<color attach="background" args={['#000']} />
 
